@@ -147,7 +147,7 @@ def process_data(test=False):
     wiki_movie_ids_list, wiki_genres_list, wiki_directors_list = wiki_query(netflix_file, user_agent)
 
     for index, row in enumerate(netflix_file):
-        netflix_id, year, title = row[0], int(row[1]), row[2]
+        netflix_id, year, title = row
         if wiki_movie_ids_list[index] == 'NULL':
             missing_count += 1
         processed_data.append([netflix_id, wiki_movie_ids_list[index], title, year, wiki_genres_list[index], wiki_directors_list[index]])
