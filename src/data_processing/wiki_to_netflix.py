@@ -139,7 +139,7 @@ def process_data(test=False):
     missing_count = 0
     processed_data = []
 
-    netflix_file = read_netflix_txt(os.path.join(base_dir, 'movie_data.txt'), test)
+    netflix_file = read_netflix_txt(os.path.join(base_dir, 'movie_titles.txt'), test)
     num_rows = len(netflix_file)
 
     netflix_csv = os.path.join(base_dir, 'movie_data.csv')
