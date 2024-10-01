@@ -132,7 +132,7 @@ def wiki_query(data_csv, user_agent):
         wiki_genres.append(wiki_feature_info(data, 'genreLabel'))
         wiki_directors.append(wiki_feature_info(data, 'directorLabel'))
     
-    return(wiki_movie_ids, wiki_genres, wiki_directors)
+    return wiki_movie_ids, wiki_genres, wiki_directors
 
 # Calling all functions
 def process_data(test=False):
@@ -157,6 +157,8 @@ def process_data(test=False):
     print('missing:', missing_count, '(', missing_count / num_rows * 100, '%)')
     print('found:', num_rows - missing_count, '(', (num_rows - missing_count) / num_rows * 100, '%)')
     print('total:', num_rows)
+
+    return processed_data
 
 if __name__ == '__main__':
     # Test is true if no argument is passed or if the first argument is not '--prod'.
